@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row header">
+    <div class="col-md-12">
+      Festaurants
+    </div>
+  </div>
+
+  <div class="row text-center" id="user-list">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center user-select styled-select white rounded">
+      <select name="users" id="user-ddl">
+        <option value="0">Select User</option>
+        {{#each users}}
+          <option value="{{this.id}}">{{this.username}}</option>
+        {{/each}}
+      </select>
+      
+    </div>
+    <div class="col-md-4 text-left">
+      <div><a href="#" id="add-user-link"><span class="align-middle">Add User</span></span></a></div>
+    </div>
+  </div>
+
+  <div class="row text-center" id="add-user">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="user-name" placeholder="Add New User">
+        </div>
+        <button type="submit" id="submit-user" class="btn">Add User</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <div class="row text-center" id="add-restaurant">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="restaurant-name" placeholder="Add New Restaurant">
+        </div>
+        <button type="submit" id="submit-restaurant" class="btn">Add to your List</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-11 text-center card card-restaurants" id="liked-restaurants">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center card card-restaurants" id="unvisited-restaurants">
+      <h2>Wanna Try</h2>
+      {{#each restaurants}}
+        {{#unless visited}}
+          {{> restaurants/unvisited-block}}
+        {{/unless}}
+      {{/each}}
+    </div> 
+
+  
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11 text-center card card-restaurants" id="disliked-restaurants">
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

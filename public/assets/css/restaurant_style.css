@@ -1,0 +1,100 @@
+body {
+    background: url(../images/background.jpg) no-repeat center center fixed;
+}
+
+.header{
+    text-align:center;
+    padding:30px;
+    font-size:60px;
+    color:white;
+    font-family:cursive;
+}
+
+.styled-select {
+    height: 35px;
+    overflow: hidden;
+    width: 100px;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-left:30px;
+    padding-right:30px;
+ }
+ .styled-select select {
+    border: none;
+    font-size: 14px;
+    height: 35px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 320px;
+ }
+ .rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+ }
+ .white   { 
+     background-color:#fff;
+ }
+ .white select { 
+     color:black;
+     font-size:17px;
+ }
+
+#add-user-link {
+    color: white; 
+  position: absolute;
+  top: 35%;
+}
+
+
+#add-restaurant,#add-user, #user-list{
+    background:black;
+    opacity:0.75;
+    color:white;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-bottom:10px;
+}
+#submit-restaurant, #submit-user{
+    background:black;
+    color:white;
+    box-shadow:0px 0px 20px white;
+    margin-top:10px;
+    font-size:25px;
+    font-family:cursive;
+}
+
+.restaurant-each{
+    padding:15px;
+    background:black;
+    color:white;
+    font-size:25px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.delrestaurant{
+    float:right;
+    background:rgb(166, 221, 245);
+}
+
+.disliked{
+    float:right;
+    background: red;
+}
+
+.liked {
+    float:left;
+    background:green;
+}
+
+.card-restaurants{
+    background:rgb(206, 202, 202);
+    opacity:0.75;
+    padding-top:20px;
+    padding-bottom:20px;
+    box-shadow:0px 0px 10px black;
+    font-family:cursive;
+}
+
+
+
