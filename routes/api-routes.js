@@ -34,7 +34,8 @@ app.get("/restaurants/:userid", function(req, res) {
     where: {
       UserId:req.params.userid
     },
-    include:[{ model: db.User}]
+    include:[{ model: db.User}],
+    order: [['name','ASC']]
   }).then(function(data){
     var hbsObject = {
       restaurants: data
