@@ -13,7 +13,10 @@ var db = require("../models");
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    db.Restaurant.findAll({include:[{ model: db.User, attributes: ['username']}]}).then(function(data){
+    db.Restaurant.findAll({
+      include:[{ model: db.User, attributes: ['username']}],
+      order: [[db.User,'username','ASC'],['name']]
+    }).then(function(data){
       var hbsObject = {
         restaurants: data
       };
